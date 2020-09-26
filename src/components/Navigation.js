@@ -51,12 +51,12 @@ const Navigation = ( props ) => {
                     <Link to={ Routes.HOME } style={ linkStyle }>Inicio</Link>
                 </Menu.Item>
 
-                <Menu.Item key={ Routes.APPOINTMENTS }>
-                    <Link to={ Routes.APPOINTMENTS } style={ linkStyle }>Citas</Link>
+                <Menu.Item key={ Routes.ABOUT }>
+                    <Link to={ Routes.ABOUT } style={ linkStyle }>Acerca de</Link>
                 </Menu.Item>
 
-                <Menu.Item key={ Routes.PRIVATE }>
-                    <Link to={ Routes.PRIVATE } style={ linkStyle }>Citas</Link>
+                <Menu.Item key={ Routes.APPOINTMENTS }>
+                    <Link to={ Routes.APPOINTMENTS } style={ linkStyle }>Citas</Link>
                 </Menu.Item>
 
                 <Menu.Item key={ Routes.ANTD }>

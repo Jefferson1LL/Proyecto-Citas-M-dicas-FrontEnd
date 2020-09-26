@@ -1,7 +1,6 @@
 const publicRoutes = {
     LOGIN: '/ingreso',
     REGISTER: '/registro',
-    APPOINTMENTS: '/citas',
     USERS: '/usuarios',
     USERS_ID: `/usuario/:id`,
     HOME: '/',
@@ -11,7 +10,7 @@ const publicRoutes = {
 
 const privateRoutes = {
     LOGOUT: '/logout',
-    PRIVATE: '/privada',
+    APPOINTMENTS: '/citas',
     ARTICLE_ID: '/articulo/:id'
 };
 
