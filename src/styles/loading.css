@@ -34,7 +34,7 @@
     animation: blob-left 1s infinite ease-in;
 }
 .spinner .move-blob {
-    background: #001529;
+    background: #1890ff;
     top: 0;
     -webkit-animation: blob-spinner-mover 1s infinite ease-in;
     animation: blob-spinner-mover 1s infinite ease-in;
