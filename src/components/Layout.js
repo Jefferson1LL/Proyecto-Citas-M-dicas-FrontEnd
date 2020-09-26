@@ -89,7 +89,14 @@ const MainLayout = props => {
                 <Footer className='footer'>
                     <Row>
                         <Col xs={ { span: 24 } } md={ 8 } className='logo-blanco'>
-                            LOGO
+                            <p><strong>Preguntas Frecuentes</strong></p>
+                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>¿Cómo registrarme? Soy doctor</Link></p>
+                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>¿Cómo registrarme? Soy paciente</Link></p>
+                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>¿Cómo cancelo una cita?</Link></p>
+                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>Sugerencias Y Reclamos</Link></p>
+
+
+
                         </Col>
 
                         <Col xs={ {
@@ -101,7 +108,10 @@ const MainLayout = props => {
                                  offset: 3
                              } }
                              className='logo-menta'>
-                            Elaborado por: <br />
+
+                            <p><strong> ¿Quiénes somos?</strong></p>
+                            <p>A  través del servicio y la preparación de nuestros médicos, enfermeras, personal de asistencia, técnicos y cientos de colaboradores dedicados a la atención del paciente, es un lugar en el que se trata a los pacientes de manera humanista y profesional.</p>
+
                             <a href='https://grupomenta.com' rel='noopener noreferrer' target='_blank'>
 
                             </a>
@@ -117,26 +127,17 @@ const MainLayout = props => {
                              } }
                              className='contact-links'>
                             <p><strong>Contáctanos</strong></p>
-                            <p><MailOutlined /> <a href='mailto:chalo.salvador@grupomenta.com'>chalo.salvador@grupomenta.com</a></p>
-                            <p><WhatsAppOutlined /> <a href='https://wa.me/593984794808' target='_blank' rel='noopener noreferrer'>+593
-                                9-8479-4808</a></p>
-                            <p><GithubOutlined /> <a href='https://github.com/chalosalvador'
-                                                     target='_blank'
-                                                     rel='noopener noreferrer'>@chalosalvador</a>
-                            </p>
+                            <p><MailOutlined /> <a href='mailto:desarrolloepn@gmail.com'>desarrolloepn@gmail.com</a></p>
+                            <p><WhatsAppOutlined /> <a href='https://wa.me/593993731322' target='_blank' rel='noopener noreferrer'>+593
+                                9937331322</a></p>
                         </Col>
                     </Row>
 
                     <Row type='flex' justify='space-between' align='bottom'>
-                        <Col xs={ 24 } md={ 8 }>
-                            { moment().format( 'YYYY' ) } - Para uso libre.
-                        </Col>
+
 
                         <Col xs={ 24 } md={ 4 } className='footer-links'>
-                            <Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>Preguntas frecuentes</Link>
-                        </Col>
-                        <Col xs={ 24 } md={ 4 } className='footer-links'>
-                            <Link to={ Routes.ABOUT }>Términos y condiciones</Link>
+
                         </Col>
 
                         <Col xs={ 24 } md={ 8 } className='logos-social'>

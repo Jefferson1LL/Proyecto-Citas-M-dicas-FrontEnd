@@ -2,7 +2,12 @@ import React from 'react';
 const AboutPage = () => (
     <>
         <h1 className='title'>
-            About Page
+            ACERCA DE Y PREGUNTAS FRECUENTES
+
+            ¿Cómo registrarme? Soy doctor
+            ¿Cómo registrarme? Soy paciente
+            ¿Cómo cancelo una cita?
+            Sugerencias Y Reclamos
         </h1>
     </>
 );

@@ -48,7 +48,7 @@ const Navigation = ( props ) => {
                 } }
             >
                 <Menu.Item key={ Routes.HOME }>
-                    <Link to={ Routes.HOME } style={ linkStyle }>Home</Link>
+                    <Link to={ Routes.HOME } style={ linkStyle }>Inicio</Link>
                 </Menu.Item>
 
                 <Menu.Item key={ Routes.APPOINTMENTS }>
@@ -56,15 +56,15 @@ const Navigation = ( props ) => {
                 </Menu.Item>
 
                 <Menu.Item key={ Routes.PRIVATE }>
-                    <Link to={ Routes.PRIVATE } style={ linkStyle }>Privada</Link>
+                    <Link to={ Routes.PRIVATE } style={ linkStyle }>Citas</Link>
                 </Menu.Item>
 
                 <Menu.Item key={ Routes.ANTD }>
-                    <Link to={ Routes.ANTD } style={ linkStyle }>ANTD</Link>
+                    <Link to={ Routes.ANTD } style={ linkStyle }>Doctores Disponibles</Link>
                 </Menu.Item>
 
                 <Menu.Item key={ Routes.ABOUT }>
-                    <Link to={ Routes.ABOUT } style={ linkStyle }>About</Link>
+                    <Link to={ Routes.ABOUT } style={ linkStyle }>¿Cómo funciona?</Link>
                 </Menu.Item>
 
                 {

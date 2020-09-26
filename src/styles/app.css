@@ -15,7 +15,7 @@ body {
 }
 
 .header-wrapper {
-  background: #001529;
+  background: #ffffff;
 }
 
 .ant-menu {
@@ -76,7 +76,7 @@ body {
 .responsive-menu-wrapper .ant-menu-dark .ant-menu-item,
 .responsive-menu-wrapper .ant-menu-dark .ant-menu-item-group-title,
 .responsive-menu-wrapper .ant-menu-dark .ant-menu-item > a{
-  color: #001529;
+  color: #00aeef;
 }
 
 .responsive-menu-wrapper .ant-popover-inner-content {
@@ -89,7 +89,7 @@ body {
 .responsive-menu-wrapper .ant-menu-dark .ant-menu-submenu-open,
 .responsive-menu-wrapper .ant-menu-dark .ant-menu-submenu-selected,
 .responsive-menu-wrapper .ant-menu-dark .ant-menu-submenu-title:hover {
-  background-color: #001529;
+  background-color: #1890ff;
 }
 
 .responsive-menu-wrapper .ant-menu-dark .ant-menu-item:hover > a,
@@ -136,7 +136,7 @@ code {
   /*text-align: center;*/
   padding: 30px 20px;
   min-height: 200px;
-  background-color: #2e2a25ee;
+  background-color: #00aeef;
   color: #ffffff;
 }
 
@@ -212,7 +212,7 @@ code {
   .footer {
     padding: 30px 100px;
     min-height: 200px;
-    background-color: #2e2a25ee;
+    background-color: #1890ff;
     color: #ffffff;
   }
 
