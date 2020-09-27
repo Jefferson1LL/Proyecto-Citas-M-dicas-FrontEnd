@@ -33,16 +33,20 @@ const Register = () => {
 
     const onFinish = async( userData ) => {
         console.log( 'Received values of form: ', userData );
-        const { name, email, password, password_confirmation, editorial, short_bio } = userData;
+        const { name, lastname,birthdate, idcard, phone, address,email, password, password_confirmation, specialty } = userData;
 
         try {
             const user = await API.post( '/register', {
                 name,
+                lastname,
+                birthdate,
+                idcard,
+                phone,
+                address,
                 email,
                 password,
                 password_confirmation,
-                editorial,
-                short_bio
+                specialty
             } );
 
             console.log( 'User', user );
@@ -85,6 +89,18 @@ const Register = () => {
                                    hasFeedback
                         >
                             <Input prefix={ <UserOutlined /> } placeholder='Nombre' />
+                        </Form.Item>
+
+                        <Form.Item name='lastname'
+                                   rules={ [
+                                       {
+                                           required: true,
+                                           message: 'Ingresa tu apellido'
+                                       }
+                                   ] }
+                                   hasFeedback
+                        >
+                            <Input prefix={ <UserOutlined /> } placeholder='Apellido' />
                         </Form.Item>
 
                         <Form.Item name='email'
