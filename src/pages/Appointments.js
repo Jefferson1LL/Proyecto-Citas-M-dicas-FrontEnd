@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import API from '../data';
 import { translateMessage } from '../utils/traslateMessage';
-import ArticleList from '../components/ArticleList';
+import AppointmentList from '../components/AppointmentList';
 import ArticleForm from '../components/ArticleForm';
 import { Button, message, Skeleton, Row, Col } from 'antd';
 import { useAuth } from '../providers/Auth';
@@ -12,10 +12,10 @@ import { mutate } from 'swr';
 /**
  * Fetch Appointments from DB
  */
-export const fetchArticles = async() => {
+export const fetchAppointments = async() => {
     // console.log( `Show data fetched. Appointments: ${ JSON.stringify( articles ) }` );
 
-    return await API.get( '/articles' );
+    return await API.get( '/appointments' );
 };
 
 /**
@@ -40,11 +40,11 @@ const Appointments = (props ) => {
     const afterCreate = async() => {
         try {
             // show skeleton
-            await mutate( '/articles', async articles => {
-                return { data: [ {}, ...articles.data ] };
+            await mutate( '/appointments', async appointments => {
+                return { data: [ {}, ...appointments.data ] };
             }, false );
 
-            await mutate( '/articles' );
+            await mutate( '/appointments' );
             setVisible( false ); // close the modal
         } catch( error ) {
             console.error(
@@ -58,41 +58,9 @@ const Appointments = (props ) => {
 
     return (
         <div>
-            {
-                auth.isAuthenticated &&
-                <Button
-                    type='primary'
-                    onClick={ () => {
-                        setVisible( true );
-                    } }
-                >
-                    Nuevo artículo
-                </Button>
-            }
 
-            {
-                categories.isLoading
-                    ? <Row type='flex' justify='center'>
-                        <Col>
-                            <Skeleton.Button active />
-                            <Skeleton.Button active />
-                            <Skeleton.Button active />
-                        </Col>
-                    </Row>
-                    : categories.isError
-                    ? <ShowError error={ categories.isError } />
-                    : <ArticleForm
-                        categories={ categories.categories }
-                        visible={ visible }
-                        update={ false }
-                        onSubmit={ afterCreate }
-                        onCancel={ () => {
-                            setVisible( false );
-                        } }
-                    />
-            }
 
-            <ArticleList categories={ categories.categories } />
+            <AppointmentList />
         </div>
     );
 };
