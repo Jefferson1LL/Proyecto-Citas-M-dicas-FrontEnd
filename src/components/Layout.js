@@ -90,10 +90,10 @@ const MainLayout = props => {
                     <Row>
                         <Col xs={ { span: 24 } } md={ 8 } className='logo-blanco'>
                             <p><strong>Preguntas Frecuentes</strong></p>
-                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>¿Cómo registrarme? Soy doctor</Link></p>
-                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>¿Cómo registrarme? Soy paciente</Link></p>
-                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>¿Cómo cancelo una cita?</Link></p>
-                            <p><Link to={ Routes.ABOUT } style={ { marginRight: 20 } }>Sugerencias Y Reclamos</Link></p>
+                            <p><Link to={ Routes.QUESTIONS } style={ { marginRight: 20 } }>¿Cómo registrarme? Soy doctor</Link></p>
+                            <p><Link to={ Routes.QUESTIONS } style={ { marginRight: 20 } }>¿Cómo registrarme? Soy paciente</Link></p>
+                            <p><Link to={ Routes.QUESTIONS } style={ { marginRight: 20 } }>¿Cómo cancelo una cita?</Link></p>
+                            <p><Link to={ Routes.QUESTIONS } style={ { marginRight: 20 } }>Sugerencias Y Reclamos</Link></p>
 
 
 

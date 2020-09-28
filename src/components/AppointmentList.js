@@ -58,6 +58,7 @@ const AppointmentList = (props ) => {
                         <th className="text-center">Sintoma</th>
                         <th className="text-center">Fecha</th>
                         <th className="text-center">Hora</th>
+                        <th className="text-center">Estado</th>
 
                     </tr>
                     </thead>
@@ -69,6 +70,7 @@ const AppointmentList = (props ) => {
                             <th className="text-center">{appointment.description}</th>
                             <td className="text-center">{appointment.datetime}</td>
                             <td className="text-center">{appointment.time}</td>
+                            <td className="text-center">{appointment.status}</td>
                         </tr>
 
                     ))}
