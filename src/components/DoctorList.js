@@ -56,7 +56,7 @@ const DoctorList = (props ) => {
                     <Col>
                         <Card
                             title={"Doctor/a"}
-                            extra={<a href='../pages/Appointments'>Agendar</a>}
+                            extra={<a href='../citas'>Agendar</a>}
                             style={{
                                 width: 300,
                                 marginRight: 20,

@@ -6,10 +6,7 @@ const publicRoutes = {
     USERS_ID: `/usuario/:id`,
     HOME: '/',
     ABOUT: '/acerca-de',
-
-
-    DOCTORS: '/doctores'
-
+    DOCTORS: '/doctores',
     QUESTIONS: '/preguntas',
     
 
