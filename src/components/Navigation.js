@@ -6,6 +6,7 @@ import { Menu } from 'antd';
 import { LogoutOutlined, LoginOutlined, LoadingOutlined, UserOutlined } from '@ant-design/icons';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/navigation.css';
+import Search from "antd/es/input/Search";
 
 const linkStyle = {};
 
@@ -46,7 +47,10 @@ const Navigation = ( props ) => {
                     lineHeight: '64px',
                     width: 'fit-content'
                 } }
+
             >
+                <Search placeholder="Buscar síntomas" onSearch={value => console.log(value)} enterButton
+                        style={{marginRight: 15,marginTop:15, width: 225 }}/>
                 <Menu.Item key={ Routes.HOME }>
                     <Link to={ Routes.HOME } style={ linkStyle }>Inicio</Link>
                 </Menu.Item>

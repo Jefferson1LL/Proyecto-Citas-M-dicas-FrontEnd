@@ -1,79 +1,83 @@
 import React from 'react';
 import '../styles/questions.css';
 import { Layout, Row, Col, Button, Popover,Divider,Space,Card,Collapse} from 'antd';
-//import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+
 
 
 const QuestionsPage = () => {
     const { Panel } = Collapse;
     return (
         <div className='container'>
-            <h1>PASOS PARA REGISTRO ?</h1>
+            <h1>PASOS PARA REGISTRO </h1>
             <p>
                 En este sistema de citas tendran la posibilidad de realizar consultas de sus citas dadas
                 de acuerdo a su medico, fecha, horario. Aconsejamos seguir los siguientes pasos detallados
                 continuacion para evitar algun tipo de error o problema con la autenticacion de cualquier
                 forma de usuario que ud sea.
             </p>
-            <Divider>COMO REGISTRARME DOCTOR</Divider>
-
-            <Divider orientation="left">PASO 1</Divider>
-            <p>
-                El administrador del sistema asignara un espacio en la base de datos de acuerdo a su acreditacion
-                para lo cual el sistema avalara su perfil y le asignara su uso adecuado segun su perfil
-                y validacion del mismo.
-            </p>
-            <Divider orientation="left">PASO 2</Divider>
-            <p>
-                Una vez en la base de datos ud tiene la opcion de registrarse como doctor para lo cual
-                el sistema pedira que ingrese su correo y una contraseña segun el caso.
-            </p>
-            <Divider orientation="left">PASO 3</Divider>
-            <p>
-                Luego de estar dentro del sistema ud tendra la posibilidad de realizar los cambios que ud crea
-                conveniente como son: agregar una fotografia en su perfil, una descripcion, telefono y demas.
-            </p>
 
 
 
-            <Divider>COMO REGISTRARME PACIENTE</Divider>
+            <Divider>COMO REGISTRARME COMO DOCTOR</Divider>
+            <Collapse accordion className='scroll'>
+                <Panel header="PASO 1" key="1">
+                    <p>El administrador del sistema asignara un espacio en la base de datos de acuerdo a su acreditacion
+                        para lo cual el sistema avalara su perfil y le asignara su uso adecuado segun su perfil
+                        y validacion del mismo.</p>
+                </Panel>
+                <Panel header="PASO 2" key="2">
+                    <p>Una vez en la base de datos ud tiene la opcion de registrarse como doctor para lo cual
+                        el sistema pedira que ingrese su correo y una contraseña segun el caso.</p>
+                </Panel>
+                <Panel header="PASO 3" key="3">
+                    <p>Luego de estar dentro del sistema ud tendra la posibilidad de realizar los cambios que ud crea
+                        conveniente como son: agregar una fotografia en su perfil, una descripcion, telefono y demas.</p>
+                </Panel>
+            </Collapse>
 
-            <Divider orientation="left">PASO 1</Divider>
-            <p>
-                El administrador del sistema asignara un espacio en la base de datos de acuerdo a su acreditacion
-                para lo cual el sistema avalara su perfil y le asignara su uso adecuado segun su perfil
-                y validacion del mismo.
-            </p>
-            <Divider orientation="left">PASO 2</Divider>
-            <p>
-                Una vez en la base de datos ud tiene la opcion de registrarse como paciente, para lo cual
-                el sistema pedira que ingrese su correo y una contraseña segun el caso.
-            </p>
-            <Divider orientation="left">PASO 3</Divider>
-            <p>
-                Luego de estar dentro del sistema ud tendra la posibilidad de realizar los cambios que ud crea
-                conveniente como son: agregar una fotografia en su perfil, una descripcion, telefono y demas.
-            </p>
+
+
+
+
+            <Divider>COMO REGISTRARME COMO PACIENTE</Divider>
+
+            <Collapse accordion className='scroll'>
+                <Panel header="PASO 1" key="1">
+                    <p>El administrador del sistema asignara un espacio en la base de datos de acuerdo a su acreditacion
+                        para lo cual el sistema avalara su perfil y le asignara su uso adecuado segun su perfil
+                        y validacion del mismo.</p>
+                </Panel>
+                <Panel header="PASO 2" key="2">
+                    <p>Una vez en la base de datos ud tiene la opcion de registrarse como paciente, para lo cual
+                        el sistema pedira que ingrese su correo y una contraseña segun el caso.</p>
+                </Panel>
+                <Panel header="PASO 3" key="3">
+                    <p>Luego de estar dentro del sistema ud tendra la posibilidad de realizar los cambios que ud crea
+                        conveniente como son: agregar una fotografia en su perfil, una descripcion, telefono y demas.</p>
+                </Panel>
+            </Collapse>
+
+
 
 
 
             <Divider>COMO CANCELAR UNA CITA</Divider>
-            <Divider orientation="left">PASO 1</Divider>
-            <p>
-                Verificar su turno de cita, para lo cual ud debe ingresar con sus credenciales
-                una vez dentro del sistema ud tendra que ir al apartado de citas.
-            </p>
-            <Divider orientation="left">PASO 2</Divider>
-            <p>
-                Registre su cancelacion en la pagina de citas verifique en el estado activo
-                en dicho recuadro asigne un codigo el cual se le enviara a su correo electronico una
-                vez el area de soporte tecnico asigne uno y este dentro de los parametros de cancelacion.
-            </p>
-            <Divider orientation="left">PASO 3</Divider>
-            <p>
-                Una vez registrada su cancelacion y verificacion de la misma en las 5 horas posteriores
-                volver a verificar su estado que haya pasado de activo a cancelado.
-            </p>
+
+            <Collapse accordion className='scroll'>
+                <Panel header="PASO 1" key="1">
+                    <p>Verificar su turno de cita, para lo cual ud debe ingresar con sus credenciales
+                        una vez dentro del sistema ud tendra que ir al apartado de citas.</p>
+                </Panel>
+                <Panel header="PASO 2" key="2">
+                    <p>Registre su cancelacion en la pagina de citas verifique en el estado activo
+                        en dicho recuadro asigne un codigo el cual se le enviara a su correo electronico una
+                        vez el area de soporte tecnico asigne uno y este dentro de los parametros de cancelacion.</p>
+                </Panel>
+                <Panel header="PASO 3" key="3">
+                    <p>Una vez registrada su cancelacion y verificacion de la misma en las 5 horas posteriores
+                        volver a verificar su estado que haya pasado de activo a cancelado.</p>
+                </Panel>
+            </Collapse>
 
 
 
@@ -199,8 +203,10 @@ Qo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zd
                 </Panel>
             </Collapse>
 
+
         </div>
     );
 };
+
 
 export default QuestionsPage;
