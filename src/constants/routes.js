@@ -7,6 +7,13 @@ const publicRoutes = {
     HOME: '/',
     ABOUT: '/acerca-de',
 
+
+    DOCTORS: '/doctores'
+
+    QUESTIONS: '/preguntas',
+    
+
+
 };
 
 const privateRoutes = {
