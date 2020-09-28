@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Skeleton, Table, Tag, Space ,Row, Col, Typography, Button } from 'antd';
+import { Card, Avatar,Skeleton, Table, Tag, Space ,Row, Col, Typography, Button } from 'antd';
 import Routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 import { useAppointmentList } from '../data/useAppointmentList';
 import ShowError from './ShowError';
 
 const { Text } = Typography;
-
+const {Meta} = Card;
 const AppointmentList = (props ) => {
 
         const { appointments, isLoading, isError, mutate } = useAppointmentList();
@@ -52,31 +52,39 @@ const AppointmentList = (props ) => {
             <>
 
 
-                <table className="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th className="text-center">Sintoma</th>
-                        <th className="text-center">Fecha</th>
-                        <th className="text-center">Hora</th>
-                        <th className="text-center">Estado</th>
+                <Row>
+                    {
+                        appointments.map((appointment, index)=>{
+                            return (
+                                <Col>
+                                    <Card
+                                        style={{
+                                            width: 500,
+                                            marginRight: 20,
+                                            marginBottom: 30,
+                                            background: '#fffff'
 
-                    </tr>
-                    </thead>
-                    <tbody>
+                                        }}
 
-                    {appointments.map(appointment => (
 
-                        <tr>
-                            <th className="text-center">{appointment.description}</th>
-                            <td className="text-center">{appointment.datetime}</td>
-                            <td className="text-center">{appointment.time}</td>
-                            <td className="text-center">{appointment.status}</td>
-                        </tr>
 
-                    ))}
+                                    >
+                                        <Meta
+                                            avatar={<Avatar size={64} src="https://draherraizmedicoypaciente.files.wordpress.com/2013/12/sin-tc3adtulo.png" />}
+                                            title={`Fecha: ${appointment.datetime} 
+                                            Hora: ${appointment.time} Cita: ${appointment.status}`}
+                                            description={appointment.description}
+                                        />
 
-                    </tbody>
-                </table>
+                                    </Card>
+
+
+                                </Col>
+                            )
+                        })
+                    }
+
+                </Row>
             </>
         );
     }
