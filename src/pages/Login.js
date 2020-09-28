@@ -99,7 +99,8 @@ const Login = () => {
                                 <Button type='primary' htmlType='submit' className='login-form-button'>
                                     Ingresar
                                 </Button>
-                                <div>Soy nuevo, <Link to={ Routes.REGISTER }>registrarme</Link></div>
+                                <div>Soy nuevo, <Link to={ Routes.REGISTER }>registrarme como paciente</Link></div>
+                                <div>Soy nuevo, <Link to={ Routes.REGISTER1 }>registrarme como doctor</Link></div>
                             </Form.Item>
                         </Form>
                     </Col>

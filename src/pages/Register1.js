@@ -14,7 +14,7 @@ import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons/lib';
 
 const { Title } = Typography;
 
-const Register = () => {
+const Register1 = () => {
     // const auth = useAuth();
     // const router = useRouter();
 
@@ -33,10 +33,10 @@ const Register = () => {
 
     const onFinish = async( userData ) => {
         console.log( 'Received values of form: ', userData );
-        const { name, lastname,birthdate, idcard, phone, address,email, password, password_confirmation } = userData;
+        const { name, lastname,birthdate, idcard, phone, address,email, password, password_confirmation, specialty } = userData;
 
         try {
-            const user = await API.post( '/register', {
+            const user = await API.post( '/registerD', {
                 name,
                 lastname,
                 birthdate,
@@ -45,8 +45,8 @@ const Register = () => {
                 address,
                 email,
                 password,
-                password_confirmation
-
+                password_confirmation,
+                specialty
             } );
 
             console.log( 'User', user );
@@ -67,7 +67,7 @@ const Register = () => {
 
     return (
         <>
-            <Title style={ { textAlign: 'center' } }>Registro de Pacientes</Title>
+            <Title style={ { textAlign: 'center' } }>Registro de Doctores</Title>
 
             <Row justify='center' className='login'>
                 <Col span={ 8 }>
@@ -151,6 +151,18 @@ const Register = () => {
                             <Input prefix={ <UserOutlined /> } placeholder='Dirección' />
                         </Form.Item>
 
+                        <Form.Item name='specialty'
+                                   rules={ [
+                                       {
+                                           required: true,
+                                           message: 'Dinos tu especialidad'
+                                       }
+                                   ] }
+                                   hasFeedback
+                        >
+                            <Input prefix={ <EditOutlined /> } placeholder='Especialidad' />
+                        </Form.Item>
+
                         <Form.Item name='email'
                                    rules={ [
                                        {
@@ -221,4 +233,4 @@ const Register = () => {
     );
 };
 
-export default withoutAuth( Register );
+export default withoutAuth( Register1 );
