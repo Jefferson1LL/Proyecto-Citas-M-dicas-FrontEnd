@@ -24,6 +24,7 @@ const AsyncHome = loadable( () => import( '../pages/Index' ), loadableOptions );
 const AsyncLogin = loadable( () => import( '../pages/Login' ), loadableOptions );
 const AsyncRegister = loadable( () => import( '../pages/Register' ), loadableOptions );
 const AsyncAppointments = loadable( () => import( '../pages/Appointments' ), loadableOptions );
+const AsyncDoctor = loadable( () => import( '../pages/Doctors' ), loadableOptions );
 const AsyncArticle = loadable( () => import( '../pages/Article' ), loadableOptions );
 const AsyncAbout = loadable( () => import( '../pages/About' ), loadableOptions );
 const AsyncLogout = loadable( () => import( '../pages/Logout' ), loadableOptions );
@@ -47,7 +48,9 @@ const AppRouter = () => (
         <PublicRoute path={ Routes.LOGIN } component={ AsyncLogin } />
         <PublicRoute path={ Routes.REGISTER } component={ AsyncRegister } />
         <PublicRoute path={ Routes.ABOUT } component={ AsyncAbout } />
-            <PublicRoute path={ Routes.QUESTIONS } component={ AsyncQuestions } />
+        <PublicRoute path={ Routes.DOCTORS } component={ AsyncDoctor } />
+        <PublicRoute path={ Routes.QUESTIONS } component={ AsyncQuestions } />
+
 
         <PrivateRoute path={ Routes.APPOINTMENTS } component={ AsyncAppointments } />
         <PrivateRoute path={ Routes.ARTICLE_ID } component={ AsyncArticle } />

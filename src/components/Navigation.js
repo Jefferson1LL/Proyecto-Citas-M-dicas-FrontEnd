@@ -59,8 +59,8 @@ const Navigation = ( props ) => {
                     <Link to={ Routes.APPOINTMENTS } style={ linkStyle }>Citas</Link>
                 </Menu.Item>
 
-                <Menu.Item key={ Routes.ANTD }>
-                    <Link to={ Routes.ANTD } style={ linkStyle }>Doctores Disponibles</Link>
+                <Menu.Item key={ Routes.DOCTORS }>
+                    <Link to={ Routes.DOCTORS } style={ linkStyle }>Doctores Disponibles</Link>
                 </Menu.Item>
 
                 <Menu.Item key={ Routes.QUESTIONS }>
