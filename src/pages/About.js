@@ -1,7 +1,7 @@
 import React from 'react';
-import { Layout, Row, Col, Button, Popover,Divider,Space,Card } from 'antd';
+import { Layout, Row, Col, Button, Popover,Divider,Space,Card,Image } from 'antd';
 import Carousel from "antd/es/carousel";
-import Image from "antd/es/image";
+//import Image from "antd/es/image";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
@@ -11,6 +11,13 @@ const AboutPage = () => {
     return (
         <>
                     <h1 >Quienes Somos</h1>
+
+            <Card title="Grupo de desarrolladores  de la E.P.N. con el objetivo de aplicar lo aprendido en nuevas tecnologías." >
+                <Image
+                    width={1020} height={420}
+                    src="https://www.analytica.com.do/wp-content/uploads/2016/08/coaching-desarrollo-profesional-servicio-01.jpg"
+                />
+            </Card>
 
 
             <Row justify='center' className='second-part'>
@@ -24,16 +31,18 @@ const AboutPage = () => {
                     <tr>
                         <th></th>
                         <Card title="Xavier Jaramillo" >
-                            <div >
-                                <img width={150} height={150} src="../images/xavier.jpg" />
-                            </div>
+                        <Image
+                        width={200} height={250}
+                        src="https://www.mediafire.com/convkey/0ab9/84xpqqsmmfhzwlx6g.jpg"
+                        />
                         </Card>
                         <td></td>
                         <td>
                             <Card title="Josue Garrido" >
-                                <div >
-                                    <img width={150} height={150} src="../images/josue.jpeg" />
-                                </div>
+                                <Image
+                                    width={200} height={250}
+                                    src="https://www.mediafire.com/convkey/4724/ih4pfexizfz8dp46g.jpg"
+                                />
                             </Card>
                         </td>
                     </tr>
@@ -49,18 +58,20 @@ const AboutPage = () => {
                     <tr>
                         <th></th>
                         <Card title="Mauricio Rodriguez" >
-                            <div >
-                                <img width={150} height={150} src="../images/mauricio.jpeg" />
-                            </div>
+                            <Image
+                                width={200} height={250}
+                                src="https://www.mediafire.com/convkey/cd0d/yhmjw2zx60patid6g.jpg"
+                            />
                         </Card>
                         <td>
 
                         </td>
                         <td>
                             <Card title="Jefferson Llumiquinga" >
-                                <div >
-                                    <img width={150} height={150} src="../images/jeff.jpeg" />
-                                </div>
+                                <Image
+                                    width={200} height={250}
+                                    src="https://www.mediafire.com/convkey/9642/o78sv7ltel3ajya6g.jpg"
+                                />
                             </Card>
                         </td>
                     </tr>
