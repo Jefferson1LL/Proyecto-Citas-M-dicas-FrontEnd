@@ -5,7 +5,7 @@ import DoctorList from '../components/DoctorList';
 import {Divider, Statistic, Typography, Image, Carousel, Button, message, Skeleton, Row, Col } from 'antd';
 import { useAuth } from '../providers/Auth';
 import {FileSearchOutlined, CarryOutOutlined, CheckOutlined} from '@ant-design/icons';
-import { useCategories } from '../data/useCategories';
+
 import ShowError from '../components/ShowError';
 import { mutate } from 'swr';
 

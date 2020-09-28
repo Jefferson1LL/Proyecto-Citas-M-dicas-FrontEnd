@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import API from '../data';
 import { translateMessage } from '../utils/traslateMessage';
 import AppointmentList from '../components/AppointmentList';
-import ArticleForm from '../components/ArticleForm';
+
 import {
     DatePicker,
     TimePicker,
@@ -19,7 +19,7 @@ import {
     Select
 } from 'antd';
 import { useAuth } from '../providers/Auth';
-import { useCategories } from '../data/useCategories';
+
 import {CarryOutOutlined} from '@ant-design/icons';
 import ShowError from '../components/ShowError';
 import { mutate } from 'swr';
