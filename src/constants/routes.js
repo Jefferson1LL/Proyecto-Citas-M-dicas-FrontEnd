@@ -5,6 +5,7 @@ const publicRoutes = {
     USERS_ID: `/usuario/:id`,
     HOME: '/',
     ABOUT: '/acerca-de',
+    QUESTIONS: '/preguntas',
     ANTD: '/antd'
 };
 

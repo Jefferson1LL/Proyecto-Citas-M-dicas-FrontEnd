@@ -1,0 +1,51 @@
+.first-part{
+    background: #e5e5e5;
+    color: #034C70;
+    text-align: center;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 60px;
+
+}
+
+p{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 50px;
+    color: #ffffff;
+    text-align: center;
+}
+h1{
+    font-family: Arial Script MT;
+    color: #1890ff !important;
+    font-size: 35px;
+    font-weight: normal;
+}
+h2{
+    font-family: Arial Script MT;
+    color: #1890ff !important;
+    font-size: 30px;
+    font-weight: normal;
+}
+h3 {
+    font-family: Arial Script MT;
+    color: #312e2e !important;
+    font-size: 25px;
+    font-weight: normal;
+}
+.ant-btn-primary {
+    color: #fff;
+    background: #1890ff;
+    border-color: #1890ff;
+    width: 150px;
+    height:40px;
+}
+
+.card-rows{
+    margin-left: 200px;
+    margin-right: -8px;
+}
+
+

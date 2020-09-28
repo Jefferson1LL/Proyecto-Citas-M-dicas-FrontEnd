@@ -1,0 +1,27 @@
+.Button1{
+    background-color:midnightblue;
+}
+
+.Button2{
+    background-color:limegreen;
+}
+
+.Button3{
+    background-color:darkred;
+}
+
+div.subapartado:hover div.info{
+
+    height:180px;
+
+}
+
+.container{
+    border:outset; padding:5% 1em;
+}
+
+.scroll{
+    height: 220px;
+    overflow: auto;
+    overscroll-behavior-y: contain;
+}
