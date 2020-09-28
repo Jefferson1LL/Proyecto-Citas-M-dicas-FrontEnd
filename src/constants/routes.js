@@ -5,7 +5,12 @@ const publicRoutes = {
     USERS_ID: `/usuario/:id`,
     HOME: '/',
     ABOUT: '/acerca-de',
+
     DOCTORS: '/doctores'
+
+    QUESTIONS: '/preguntas',
+    
+
 };
 
 const privateRoutes = {
