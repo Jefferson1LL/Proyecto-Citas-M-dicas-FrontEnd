@@ -1,3 +1,96 @@
+@import '../../node_modules/antd/dist/antd.css';
+
+.header{
+  background-image: url('../images/bg-header.jpg');
+  background-size: cover;
+  background-position: center;
+
+
+}
+.header-inner{
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg,rgba(255,255,255,0.2805497198879552)13%,rgba(0,0,0,0.6671043417366946)90%);
+}
+
+
+
+
+
+
+.texto{
+  padding-left: 20%;
+}
+hr{
+  color:black);
+  height: 0px;
+  border:1px dashed;
+}
+.section {
+  background-color: #b2282c;
+}
+p{
+  color: #ffffff;
+  font-size: small;
+}
+.col-4{
+  padding-left: 100px;
+}
+.section2 {
+  background-color:white;
+}
+
+
+div.titulo{
+  width:600px;
+  height:50px;
+  background-color: gray;
+  overflow: hidden;
+  border-bottom: 1px solid #b4b9b6;
+}
+
+p.titulo{
+  margin:13px;
+  color: white;
+}
+
+div.info{
+  width:600px;
+  height:0px;
+  background-color: white;
+  overflow: hidden;
+
+}
+
+p.info{
+  margin:20px;
+  color:#4f4f4f;
+}
+
+div.subapartado:hover div.info{
+
+  height:180px;
+
+}
+h5{
+  color: #19C4B5  ;
+  font-size: 35px;
+}
+.img{
+  transform: rotate(-180deg);
+}
+
+tab-pane .mapas{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
 html,
 body {
   padding: 0;
@@ -255,3 +348,7 @@ code {
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 /*!*@media (min-width: 1200px) { ... }*!*/
+
+
+
+
