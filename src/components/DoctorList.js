@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Skeleton, Table, Tag, Space ,Row, Col, Typography, Button } from 'antd';
+import  { Avatar, Card, Skeleton, Table, Tag, Space ,Row, Col, Typography, Button } from 'antd';
 import Routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 import { useDoctorList } from '../data/useDoctorList';
@@ -9,6 +9,7 @@ const { Text } = Typography;
 
 const DoctorList = (props ) => {
 
+        const { Meta } = Card;
         const { doctors, isLoading, isError, mutate } = useDoctorList();
 
         // const [ articles, setArticles ] = useState( props.articles );
@@ -45,34 +46,36 @@ const DoctorList = (props ) => {
 
         return (
             <>
+                <Row justify='center' gutter={[16, 16]}>
+
+                        {
+                doctors.map((doctor) => {
+                    return (
 
 
-                <table className="table table-bordered"  >
-                    <thead>
-                    <tr>
-                        <th className="text-align:center">Nombre</th>
-                        <th className="text-align:center">Apellido</th>
-                        <th className="text-align:center">Especialidad</th>
+                    <Col>
+                        <Card
+                            title={"Doctor/a"}
+                            extra={<a href='../pages/Appointments'>Agendar</a>}
+                            style={{
+                                width: 300,
+                                marginRight: 20,
+                                marginBottom: 30 }}
+                        >
+                            <Meta
+                                avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                                title={`${doctor.name}  ${doctor.lastname}`}
+                                description={`Especialidad: ${doctor.specialty}`}
+                            />
+                        </Card>
+                    </Col>
+                    )}
+                )}
 
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    {doctors.map(doctor => (
-
-                        <tr>
-                            <th className="text-align:center">{doctor.name}</th>
-                            <td className="text-align:center">{doctor.lastname}</td>
-                            <td className="text-align:center">{doctor.specialty}</td>
-                        </tr>
-
-                    ))}
-
-                    </tbody>
-                </table>
+                </Row>
             </>
         );
-    }
-;
+
+}
 
 export default DoctorList;
