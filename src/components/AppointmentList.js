@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Avatar,Skeleton, Table, Tag, Space ,Row, Col, Typography, Button } from 'antd';
+import {Card, Avatar, Skeleton, Table, Tag, Space, Row, Col, Typography, Button, Modal, Divider, message} from 'antd';
 import Routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 import { useAppointmentList } from '../data/useAppointmentList';
 import ShowError from './ShowError';
+import {Form, Input, Select} from "../pages/Antd";
+import Appointments from "../pages/Appointments";
+import API from "../data";
+import ErrorList from "./ErrorList";
+import {translateMessage} from "../utils/traslateMessage";
 
 const { Text } = Typography;
 const {Meta} = Card;
 const AppointmentList = (props ) => {
-
+        const [ showModal, setShowModal ] = useState( false );
+        const [ currentAppointmentId, setCurrentAppointmentId ] = useState( null );
+        const [ currentAppointmentDescription, setCurrentAppointmentDescription ] = useState( null );
+        const [ currentAppointmentTime, setCurrentAppointmentTime ] = useState( null );
+        const [ currentAppointmentDateTime, setCurrentAppointmentDateTime ] = useState( null );
         const { appointments, isLoading, isError, mutate } = useAppointmentList();
 
         // const [ articles, setArticles ] = useState( props.articles );
@@ -43,9 +52,27 @@ const AppointmentList = (props ) => {
             return <ShowError error={ isError } />;
         }
 
+    const handleViewDetails = (id) => {
+            setCurrentAppointmentId(id)
+        setShowModal(true);
+    }
+    const handleViewDescription = (description) => {
+        setCurrentAppointmentDescription(description)
+    }
+    const handleViewTime = (time) => {
+        setCurrentAppointmentTime(time)
+    }
+    const handleViewDateTime = (datetime) => {
+        setCurrentAppointmentDateTime(datetime)
+    }
 
+    const handleCancel = () => {
+        setShowModal(false);
+    }
 
-
+    const handleOk = () => {
+        setShowModal(false);
+    }
 
 
         return (
@@ -58,6 +85,13 @@ const AppointmentList = (props ) => {
                             return (
                                 <Col>
                                     <Card
+                                        onClick={ () => {
+                                            handleViewDetails(appointment.id)
+                                            handleViewDescription(appointment.description)
+                                            handleViewTime(appointment.time)
+                                            handleViewDateTime(appointment.datetime)
+
+                                        }}
                                         style={{
                                             width: 500,
                                             marginRight: 20,
@@ -77,9 +111,24 @@ const AppointmentList = (props ) => {
                                         />
 
                                     </Card>
+                                    <Modal
+                                        title={`Número de cita: ${currentAppointmentId}`}
+                                        visible={showModal}
+
+                                        onOk={ () => handleOk()}
+                                        onCancel={ () => handleCancel()}
+                                    >
+                                        Fecha: {currentAppointmentDateTime}
+                                        <Divider/>
+                                        Hora: {currentAppointmentTime}
+                                        <Divider/>
+                                        Descripción: {currentAppointmentDescription}
+
+                                    </Modal>
 
 
                                 </Col>
+
                             )
                         })
                     }
