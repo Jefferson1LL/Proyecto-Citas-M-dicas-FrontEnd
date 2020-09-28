@@ -1,17 +1,18 @@
 const publicRoutes = {
     LOGIN: '/ingreso',
-    REGISTER: '/registro',
+    REGISTER: '/registro-paciente',
+    REGISTER1: '/registro-doctores',
     USERS: '/usuarios',
     USERS_ID: `/usuario/:id`,
     HOME: '/',
     ABOUT: '/acerca-de',
-    ANTD: '/antd'
+
 };
 
 const privateRoutes = {
     LOGOUT: '/logout',
     APPOINTMENTS: '/citas',
-    ARTICLE_ID: '/articulo/:id'
+
 };
 
 const Routes = {
