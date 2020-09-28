@@ -14,7 +14,7 @@ const AboutPage = () => {
 
             <Card title="Grupo de desarrolladores  de la E.P.N. con el objetivo de aplicar lo aprendido en nuevas tecnologías." >
                 <Image
-                    width={1020} height={420}
+                    width={1185} height={420}
                     src="https://www.analytica.com.do/wp-content/uploads/2016/08/coaching-desarrollo-profesional-servicio-01.jpg"
                 />
             </Card>

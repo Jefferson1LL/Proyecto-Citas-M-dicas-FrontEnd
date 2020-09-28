@@ -201,10 +201,10 @@ const Appointments = ( {
                                    }
                                ] }
                     >
-                        <Select style={ { width: 120 } } onChange={ handleChangeCategory } loading={ !doctors }>
+                        <Select style={ { width: 315 } } onChange={ handleChangeCategory } loading={ !doctors }>
                             {
                                 doctors && doctors.map( ( doctor, index ) =>
-                                    <Option value={ doctor.id } key={ index }>{ doctor.name }</Option>
+                                    <Option value={ doctor.id } key={ index }>{`Nombre: ${ doctor.name } ${doctor.lastname} , Especialidad: ${doctor.specialty}`}</Option>
                                 )
                             }
                         </Select>
